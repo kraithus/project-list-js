@@ -1,0 +1,26 @@
+{"Region":"North","Council":"Chitipa District Council","Category":"Agriculture","Project":"Smart agricultural solutions"}
+{"Region":"North","Council":"Chitipa District Council","Category":"Banking & Finance","Project":"Revenue Collection management system"}
+{"Region":"North","Council":"Chitipa District Council","Category":"Education","Project":"Digital libraries"}
+{"Region":"North","Council":"Chitipa District Council","Category":"Health","Project":"Waste management system"}
+{"Region":"North","Council":"Karonga District Council","Category":"Agriculture","Project":"ICT platform to promote behavioral change such as to Raise awareness of general needs; convince farmers to try something new, provide specific information needed for change, facilitate access to credit and input, and Link farmers to markets"}
+{"Region":"North","Council":"Karonga District Council","Category":"Banking & Finance","Project":"Digitalize data register from data collection and tracking\r\n"}
+{"Region":"North","Council":"Karonga District Council","Category":"Education","Project":"An app for tracking completion rates"}
+{"Region":"North","Council":"Karonga District Council","Category":"Health","Project":"To develop an app that will detect ART client defaulters on time"}
+{"Region":"North","Council":"Karonga District Council","Category":"ICT and Digital Services","Project":"Developing recording system for e-personal file"}
+{"Region":"North","Council":"Likoma District Council","Category":"Agriculture","Project":"In-Shore Closed- Fish Cage Production Technology"}
+{"Region":"North","Council":"Likoma District Council","Category":"Banking & Finance","Project":"introduction of e-ticketing"}
+{"Region":"North","Council":"Likoma District Council","Category":"Education","Project":"Teacher Class Attendance Monitoring Tool"}
+{"Region":"North","Council":"Likoma District Council","Category":"Health","Project":"Introduce expert clients for follow ups and introduce digital and manual reminders"}
+{"Region":"North","Council":"Likoma District Council","Category":"ICT and Digital Services","Project":"Digitisation of Council Services and Records"}
+{"Region":"North","Council":"M'MBELWA District Council","Category":"Agriculture","Project":"Innovations to integrated water resources use"}
+{"Region":"North","Council":"M'MBELWA District Council","Category":"Banking & Finance","Project":"Innovations in market revenue generation, collection and management"}
+{"Region":"North","Council":"M'MBELWA District Council","Category":"Education","Project":"Any innovations that promote access to Early Childhood Development Services"}
+{"Region":"North","Council":"M'MBELWA District Council","Category":"Health","Project":"Innovations in water sanitation and hygiene technologies and Behaviour change and communication strategies and interventions would be championed."}
+{"Region":"North","Council":"M'MBELWA District Council","Category":"ICT and Digital Services","Project":"Innovations for ICT and digital services in schools and health facilities."}
+{"Region":"North","Council":"Mzuzu Municipal Council","Category":"Agriculture","Project":"Smart agricultural solutions"}
+{"Region":"North","Council":"Mzuzu Municipal Council","Category":"Banking & Finance","Project":"Using IOT to manage vendors for inclusivity and compliance."}
+{"Region":"North","Council":"Mzuzu Municipal Council","Category":"Education","Project":"ICT solutions to addressing the issues of real time data for decision, teaching spaces, and modes that enhance learning."}
+{"Region":"North","Council":"Mzuzu Municipal Council","Category":"Health","Project":"smart waste management technologies.\r\n\r\nTo improve efficiency in collection and management. Some of the solutions could be using smart bins, digitize collection routes and tracking on waste collection. Explore the use of tools such as I-Tree canopy and landscape classify land and tree cover given area by using random sampling of aerial imagery."}
+{"Region":"North","Council":"Mzuzu Municipal Council","Category":"ICT and Digital Services","Project":"Urban development.\r\n\r\nDevelop an Urban Observatory to generate awareness on urban issues and improve general accountability of decision makers. The tool could provide a monitoring system that can help collate, analyze and translate data into simple-to-understand information for policies and actions."}
+{"Region":"North","Council":"Nkhatabay District Council","Category":"Agriculture","Project":"Lack of energy for powering irrigation farming"}
+{"Region":"North","Council":"Nkhatabay District Council","Category":"Education","Project":"Digital libraries"}
