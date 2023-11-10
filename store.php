@@ -26,6 +26,8 @@ switch ($category) {
         break;
     case "ICT and Digital Services":
         // Unset category af this shit done selected
+        unset($_SESSION['selectedRegion']);
+        unset($_SESSION['selectedCouncil']);
         unset($_SESSION['selectedCategory']);
         break;    
 }
