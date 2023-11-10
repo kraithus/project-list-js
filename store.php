@@ -10,6 +10,26 @@ $project = $_POST['project'];
 $_SESSION['selectedRegion'] = $region;
 $_SESSION['selectedCouncil'] = $council;
 
+// Use a switch statement to set additional session variable based on category
+switch ($category) {
+    case "Agriculture":
+        $_SESSION['selectedCategory'] = "Banking & Finance";
+        break;
+    case "Banking & Finance":
+        $_SESSION['selectedCategory'] = "Education";
+        break;
+    case "Education":
+        $_SESSION['selectedCategory'] = "Health";
+        break;
+    case "Health":
+        $_SESSION['selectedCategory'] = "ICT and Digital Services";
+        break;
+    case "ICT and Digital Services":
+        // Unset category af this shit done selected
+        unset($_SESSION['selectedCategory']);
+        break;    
+}
+
 // Create an associative array with the form data
 $data = array(
     'Region' => $region,

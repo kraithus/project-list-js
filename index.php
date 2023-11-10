@@ -36,15 +36,24 @@ session_start();
   
       <div class="form-group mb-2">
         <label for="councilDropdown">Council:</label>
-        <select name="council" id="councilDropdown" class="form-control">
-        
-        <option value=""  
-        <!-- Council options will be dynamically populated here -->
+        <?php if(isset($_SESSION['selectedCouncil'])): ?> 
+        <select name="council" class="form-control">
+          <option value="<?php echo $_SESSION['selectedCouncil']; ?>"><?php echo $_SESSION['selectedCouncil']; ?></option>
         </select>
+        <?php else: ?>
+        <select name="council" id="councilDropdown" class="form-control">
+          <!-- Council options will be dynamically populated here -->
+        </select>
+        <?php endif; ?>
       </div>
   
       <div class="form-group mb-2">
         <label for="categoryDropdown">Category:</label>
+        <?php if(isset($_SESSION['selectedCategory'])): ?>
+        <select name="category" class="form-control">  
+          <option value="<?php echo $_SESSION['selectedCategory'];?>"><?php echo $_SESSION['selectedCategory'];?></option>
+        </select>  
+        <?php else: ?>  
         <select name="category" id="categoryDropdown" class="form-control">
           <option value="Agriculture">Agriculture</option>
           <option value="Banking & Finance">Banking & Finance</option>
@@ -52,6 +61,7 @@ session_start();
           <option value="Health">Health</option>
           <option value="ICT and Digital Services">ICT and Digital Services</option>
         </select>
+        <?php endif; ?>
       </div>
   
       <div class="form-group mb-4">
@@ -59,12 +69,29 @@ session_start();
         <textarea name="project" id="project" class="form-control" placeholder="Enter project name"></textarea>
       </div>
   
-      <div class="form-group mb-2">
+      <div class="form-group mb-4">
         <button id="addButton" class="form-control btn btn-dark-blue" type="submit" onlick="storeSelectedValues()">Add</button>
       </div>  
+
+      <div class="form-group">
+        <button id="clearSessionButton" class="form-control btn btn-danger" type="button" onclick="clearSession()">Clear Session</button>
+      </div>
     </form>
   </div>
-
+  
+  <script>
+    // Function to clear session
+    function clearSession() {
+      <?php
+      // Clear specific session variables
+      unset($_SESSION['selectedRegion']);
+      unset($_SESSION['selectedCouncil']);
+      unset($_SESSION['selectedCategory']);
+      ?>
+      // Reload the page to reflect changes
+      location.reload();
+    }
+  </script>
   <script src="data.js"></script>
   <script src="add.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
