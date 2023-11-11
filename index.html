@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="dark">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Project List</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+
+    <link rel="icon" type="image/png" href="ico.png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container table-responsive">
+        <table id="projectList" class="display cell-border compact"></table>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // Fetch JSON data from the file
+            fetch('projects_list_formatted.json')
+                .then(response => response.json())
+                .then(jsonData => {
+                    // Convert JSON data into an array for DataTables
+                    var dataArray = [];
+                    Object.keys(jsonData).forEach(function (category) {
+                        Object.keys(jsonData[category]).forEach(function (region) {
+                            Object.keys(jsonData[category][region]).forEach(function (council) {
+                                jsonData[category][region][council].forEach(function (project) {
+                                    dataArray.push([category, region, council, project]);
+                                });
+                            });
+                        });
+                    });
+
+                    // Initialize DataTables
+                    $('#projectList').DataTable({
+                        data: dataArray,
+                        columns: [
+                            { title: 'Category' },
+                            { title: 'Region' },
+                            { title: 'Council' },
+                            { title: 'Project' }
+                        ]
+                    });
+                })
+                .catch(error => console.error('Error fetching JSON:', error));
+        });
+    </script>
+
+</body>
+</html>
