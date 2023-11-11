@@ -19,7 +19,7 @@
         body {
             font-family: 'Roboto', sans-serif;
         }
-        
+
         nav {
             background-color: #333;
             color: #fff;
@@ -33,10 +33,11 @@
             margin: 0 10px;
         }    
     </style>
+    
 </head>
 <body>
     <nav>
-        <a href="index-old.html">Go to Legacy Version</a>
+        <a href="index.html">Go Back to Culture</a>
     </nav>
     <div class="container table-responsive">
         <table id="projectList" class="display cell-border compact"></table>
@@ -45,7 +46,7 @@
     <script>
         $(document).ready(function () {
             // Fetch JSON data from the file
-            fetch('test_list.json')
+            fetch('projects_list_formatted.json')
                 .then(response => response.json())
                 .then(jsonData => {
                     // Convert JSON data into an array for DataTables
@@ -54,34 +55,26 @@
                         Object.keys(jsonData[category]).forEach(function (region) {
                             Object.keys(jsonData[category][region]).forEach(function (council) {
                                 jsonData[category][region][council].forEach(function (project) {
-                                    dataArray.push([
-                                        project.id,  // Access the project ID
-                                        category,
-                                        region,
-                                        council,
-                                        project.projectName  // Access the project name
-                                    ]);
+                                    dataArray.push([category, region, council, project]);
                                 });
                             });
                         });
                     });
-    
+
                     // Initialize DataTables
                     $('#projectList').DataTable({
                         data: dataArray,
                         columns: [
-                            { title: 'Project ID' },  // Adjust the column title
                             { title: 'Category' },
                             { title: 'Region' },
                             { title: 'Council' },
-                            { title: 'Project Name' }  // Adjust the column title
+                            { title: 'Project' }
                         ]
                     });
                 })
                 .catch(error => console.error('Error fetching JSON:', error));
         });
     </script>
-    
 
 </body>
 </html>
